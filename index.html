@@ -85,7 +85,7 @@
             }
         })
         // submit button-----------
-        function verifyInput(){
+        function verifyInput(){ 
             let generatePin =  document.getElementById("pin").value;
             let typedPin = document.getElementById("typed-input").value;
             if(generatePin === typedPin){
@@ -96,6 +96,9 @@
                 getDisplay("none", "block");
                 
             }
+
+            document.getElementById("pin").value = "";
+            document.getElementById("typed-input").value = "";
         }
         // get correct and incorrect display function
         function getDisplay(correctStatus, incorrectStatus){
